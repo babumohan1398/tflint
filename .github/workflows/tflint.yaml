@@ -27,7 +27,7 @@ jobs:
         run: sudo docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint > report
         
       - name: checking the contents
-        run: ls -la && cat report
+        run: cat report
 
   
 
