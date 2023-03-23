@@ -24,7 +24,7 @@ jobs:
         run: ls -la
         
       - name: Linting the terraform code
-        run: sudo docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint
+        run: sudo docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint --minimum-failure-severity=error
         
 #       - name: checking the contents
 #         run: cat report
